@@ -14,13 +14,6 @@ stages:
   - after_success
 
 ############################################
-# STAGES
-
-cache:
-  paths:
-  - Carthage
-
-############################################
 # JOBS
 
 before_script:
@@ -49,8 +42,15 @@ before_script:
   # you can remove if you don't have dependencies
   - PLATFORM=$PLATFORM ./scripts/bootstrap-if-needed
 
+after_script:
+  - osascript -e 'tell app "Simulator" to quit'
+
 ############################################
 # TEMPLATES
+
+.cache: &cache_paths
+  paths:
+  - Carthage
 
 .script_template: &script_definition
   script:
@@ -110,40 +110,56 @@ before_script:
 
 # iPhone 7
 iPhone 7 - OS 10.2:
-  <<: *script_definition
   stage: test
+  cache:
+    <<: *cache_paths
+    key: iOS
   tags:
     - xcode
+    - iOS
+  <<: *script_definition
   variables:
     <<: *iOS_vars
     DESTINATION: "platform=iOS Simulator,OS=10.2,name=iPhone 7"
 
 # macOS
 macOS - OS 10.12:
-  <<: *script_definition
   stage: test
+  cache:
+    <<: *cache_paths
+    key: macOS
   tags:
     - xcode
+    - macOS
+  <<: *script_definition
   variables:
     <<: *macOS_vars
 
 # tvOS
 Apple TV 1080p - OS 10.1:
-  <<: *script_definition
   stage: test
+  cache:
+    <<: *cache_paths
+    key: tvOS
   tags:
     - xcode
+    - tvOS
+  <<: *script_definition
   variables:
     <<: *tvOS_vars
     DESTINATION: "OS=10.1,name=Apple TV 1080p"
 
 # watchOS
 Apple Watch Series 2 - OS 3.1:
-  <<: *script_definition
   stage: test
-  allow_failure: true
+  cache:
+    <<: *cache_paths
+    key: watchOS
   tags:
     - xcode
+    - watchOS
+  allow_failure: true
+  <<: *script_definition
   variables:
     <<: *watchOS_vars
     DESTINATION: "platform=watchOS Simulator,OS=3.1,name=Apple Watch Series 2 - 42mm"
@@ -153,17 +169,25 @@ Apple Watch Series 2 - OS 3.1:
 
 podlint:
   stage: podlint
-  tags:
-  - xcode
   when: on_success
+  tags:
+    - xcode
+    - iOS
+  before_script:
+    - echo "Podlint"
   script:
     - pod lib lint --allow-warnings
 
+############################################
+# JOBS - STAGE: AFTER SUCCESS
+
 danger:
   stage: after_success
-  tags:
-  - xcode
   when: on_success
+  tags:
+    - xcode
+  before_script:
+    - echo "Danger"
   script:
     - danger
 
