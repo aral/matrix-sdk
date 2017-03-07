@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "MatrixSDK"
   s.version      = "0.1.0"
-  s.summary      = "Unofficial iOS SDK to build apps compatible with Matrix (https://www.matrix.org)"
+  s.summary      = "Unofficial SDK to build apps compatible with Matrix (https://www.matrix.org) using Swift."
   s.description  = <<-DESC
-    Unofficial iOS SDK to build apps compatible with Matrix (https://www.matrix.org).
+    Unofficial SDK to build apps compatible with Matrix (https://www.matrix.org) using Swift.
   DESC
   s.homepage     = "https://github.com/gperdomor/MatrixSDK"
   s.license      = { :type => "MIT", :file => "LICENSE" }

@@ -20,7 +20,7 @@ class MatrixSDKTests: XCTestCase {
 
 #if os(Linux)
 extension MatrixSDKTests {
-    static var allTests : [(String, (MatrixSDKTests) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixSDKTests) -> () throws -> Void)] {
         return [
             ("testExample", testExample),
         ]
