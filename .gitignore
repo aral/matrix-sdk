@@ -72,5 +72,5 @@ fastlane/test_output
 # End of https://www.gitignore.io/api/swift
 
 .DS_Store
-.vscode/
 .idea/
+.vscode()

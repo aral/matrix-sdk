@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+public typealias UserId = String
+public typealias MxcUrl = String

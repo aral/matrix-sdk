@@ -16,4 +16,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/gperdomor/MatrixSDK.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
+
+  s.dependency "Moya", "~> 8.0"
+  s.dependency "Unbox", "~> 2.4"
+  s.dependency "MoyaUnbox", "~> 1.0"
+  s.dependency "SwifterSwift", "~> 1.6"
+  s.dependency "Alamofire", "~> 4.4"
 end
