@@ -1,0 +1,5 @@
+github "Moya/Moya" ~> 8.0
+github "johnsundell/unbox" ~> 2.4
+github "gperdomor/MoyaUnbox" ~> 1.0
+github "Alamofire/Alamofire" ~> 4.4
+github "SwifterSwift/SwifterSwift" ~> 1.6
