@@ -1,4 +1,4 @@
-# Ruma Status
+# Matrix SDK Status
 
 The following chart shows the status of support for the endpoints in the [client-server API specification](https://matrix.org/docs/spec/client_server/latest.html).
 If you're interested in working on an API, take a look at the corresponding tracking issue and leave a comment indicating your interest!
@@ -18,25 +18,25 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/1">#1</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/1">#1</a></td>
     <td>GET /versions</td>
   </tr>
   <tr>
     <th align="left" colspan="3">Session</th>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/2">#2</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/2">#2</a></td>
     <td>POST /login</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/3">#3</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/3">#3</a></td>
     <td>POST /tokenrefresh</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/4">#4</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/4">#4</a></td>
     <td>POST /logout</td>
   </tr>
   <tr>
@@ -44,27 +44,27 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/5">#5</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/5">#5</a></td>
     <td>POST /register</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/6">#6</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/6">#6</a></td>
     <td>POST /account/password/email/requestToken</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/7">#7</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/7">#7</a></td>
     <td>POST /account/deactivate</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/8">#8</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/8">#8</a></td>
     <td>POST /account/password</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/9">#9</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/9">#9</a></td>
     <td>POST /register/email/requestToken</td>
   </tr>
   <tr>
@@ -72,17 +72,17 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/20">#10</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/20">#10</a></td>
     <td>POST /account/3pid</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/11">#11</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/11">#11</a></td>
     <td>GET /account/3pid</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/12">#12</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/12">#12</a></td>
     <td>POST /account/3pid/email/requestToken</td>
   </tr>
   <tr>
@@ -90,12 +90,12 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/13">#13</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/13">#13</a></td>
     <td>GET /user/:user_id/filter/:filter_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/14">#14</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/14">#14</a></td>
     <td>POST /user/:user_id/filter</td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/15">#15</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/15">#15</a></td>
     <td>GET /sync</td>
   </tr>
   <tr>
@@ -111,27 +111,27 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/16">#16</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/16">#16</a></td>
     <td>GET /rooms/:room_id/state</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/17">#17</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/17">#17</a></td>
     <td>GET /rooms/:room_id/members</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/18">#18</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/18">#18</a></td>
     <td>GET /rooms/:room_id/state/:event_type/:state_key</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/19">#19</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/19">#19</a></td>
     <td>GET /rooms/:room_id/state/:event_type</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/20">#20</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/20">#20</a></td>
     <td>GET /rooms/:room_id/messages</td>
   </tr>
   <tr>
@@ -139,17 +139,17 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/21">#21</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/21">#21</a></td>
     <td>PUT /rooms/:room_id/state/:event_type</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/22">#22</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/22">#22</a></td>
     <td>PUT /rooms/:room_id/state/:event_type/:state_key</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/23">#23</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/23">#23</a></td>
     <td>PUT /rooms/:room_id/send/:event_type/:transaction_id</td>
   </tr>
   <tr>
@@ -157,7 +157,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/24">#24</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/24">#24</a></td>
     <td>PUT /rooms/:room_id/redact/:event_id/:transaction_id</td>
   </tr>
   <tr>
@@ -165,7 +165,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/25">#25</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/25">#25</a></td>
     <td>POST /createRoom</td>
   </tr>
   <tr>
@@ -173,17 +173,17 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/26">#26</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/26">#26</a></td>
     <td>PUT /directory/room/:room_alias</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/27">#27</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/27">#27</a></td>
     <td>DELETE /directory/room/:room_alias</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/28">#28</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/28">#28</a></td>
     <td>GET /directory/room/:room_alias</td>
   </tr>
   <tr>
@@ -191,32 +191,32 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/29">#29</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/29">#29</a></td>
     <td>POST /rooms/:room_id/invite</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/30">#30</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/30">#30</a></td>
     <td>POST /join/:room_id_or_alias</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/31">#31</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/31">#31</a></td>
     <td>POST /rooms/:room_id/join</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/32">#32</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/32">#32</a></td>
     <td>POST /rooms/:room_id/kick</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/33">#33</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/33">#33</a></td>
     <td>POST /rooms/:room_id/unban</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/34">#34</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/34">#34</a></td>
     <td>POST /rooms/:room_id/ban</td>
   </tr>
   <tr>
@@ -224,12 +224,12 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/35">#35</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/35">#35</a></td>
     <td>POST /rooms/:room_id/forget</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/36">#36</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/36">#36</a></td>
     <td>POST /rooms/:room_id/leave</td>
   </tr>
   <tr>
@@ -237,35 +237,35 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/37">#37</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/37">#37</a></td>
     <td>GET /publicRooms</td>
   </tr>
   <tr>
     <th align="left" colspan="3">Profiles</th>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/38">#38</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/38">#38</a></td>
     <td>PUT /profile/:user_id/displayname</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/39">#39</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/39">#39</a></td>
     <td>GET /profile/:user_id/displayname</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/40">#40</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/40">#40</a></td>
     <td>PUT /profile/:user_id/avatar_url</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/41">#41</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/41">#41</a></td>
     <td>GET /profile/:user_id/avatar_url</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/42">#42</a>
+    <td align="center">:white_check_mark:</td>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/42">#42</a></td>
     <td>GET /profile/:user_id</td>
   </tr>
   <tr>
@@ -273,7 +273,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/43">#43</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/43">#43</a></td>
     <td>GET /voip/turnServer</td>
   </tr>
   <tr>
@@ -281,7 +281,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/44">#44</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/44">#44</a></td>
     <td>PUT /rooms/:room_id/typing/:user_id</td>
   </tr>
   <tr>
@@ -289,7 +289,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/45">#45</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/45">#45</a></td>
     <td>POST /rooms/:room_id/receipt/:receipt_type/:event_id</td>
   </tr>
   <tr>
@@ -297,22 +297,22 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/46">#46</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/46">#46</a></td>
     <td>PUT /presence/:user_id/status</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/47">#47</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/47">#47</a></td>
     <td>GET /presence/:user_id/status</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/48">#48</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/48">#48</a></td>
     <td>POST /presence/list/:user_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/49">#49</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/49">#49</a></td>
     <td>GET /presence/list/:user_id</td>
   </tr>
   <tr>
@@ -320,17 +320,17 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/50">#50</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/50">#50</a></td>
     <td>GET /download/:server_name/:media_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/51">#51</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/51">#51</a></td>
     <td>POST /upload</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/52">#52</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/52">#52</a></td>
     <td>GET /thumbnail/:server_name/:media_id</td>
   </tr>
   <tr>
@@ -338,12 +338,12 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/53">#53</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/53">#53</a></td>
     <td>POST /pushers/set</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/54">#54</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/54">#54</a></td>
     <td>GET /pushers</td>
   </tr>
   <tr>
@@ -351,42 +351,42 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/55">#55</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/55">#55</a></td>
     <td>PUT /pushrules/:scope/:kind/:rule_id/enabled</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/56">#56</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/56">#56</a></td>
     <td>GET /pushrules/:scope/:kind/:rule_id/enabled</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/57">#57</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/57">#57</a></td>
     <td>PUT /pushrules/:scope/:kind/:rule_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/58">#58</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/58">#58</a></td>
     <td>DELETE /pushrules/:scope/:kind/:rule_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/59">#59</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/59">#59</a></td>
     <td>GET /pushrules/:scope/:kind/:rule_id</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/60">#60</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/60">#60</a></td>
     <td>GET /pushrules</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/61">#61</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/61">#61</a></td>
     <td>PUT /pushrules/:scope/:kind/:rule_id/actions</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/62">#62</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/62">#62</a></td>
     <td>GET /pushrules/:scope/:kind/:rule_id/actions</td>
   </tr>
   <tr>
@@ -394,7 +394,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/63">#63</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/63">#63</a></td>
     <td>POST /search</td>
   </tr>
   <tr>
@@ -402,7 +402,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/64">#64</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/64">#64</a></td>
     <td>GET /events</td>
   </tr>
   <tr>
@@ -410,17 +410,17 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/65">#65</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/65">#65</a></td>
     <td>PUT /user/:user_id/rooms/:room_id/tags/:tag</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/66">#66</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/66">#66</a></td>
     <td>DELETE /user/:user_id/rooms/:room_id/tags/:tag</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/67">#67</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/67">#67</a></td>
     <td>GET /user/:user_id/rooms/:room_id/tags</td>
   </tr>
   <tr>
@@ -428,12 +428,12 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/68">#68</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/68">#68</a></td>
     <td>PUT /user/:user_id/rooms/:room_id/account_data/:type</td>
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/69">#69</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/69">#69</a></td>
     <td>PUT /user/:user_id/account_data/:type</td>
   </tr>
   <tr>
@@ -441,7 +441,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/70">#70</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/70">#70</a></td>
     <td>GET /admin/whois/:user_id</td>
   </tr>
   <tr>
@@ -449,7 +449,7 @@ Legend:
   </tr>
   <tr>
     <td align="center">:no_entry_sign:</td>
-    <a href="https://github.com/gperdomor/matrix-swift-sdk/issues/71">#71</a>
+    <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/71">#71</a></td>
     <td>GET /rooms/:room_id/context/:event_id</td>
   </tr>
 </table>
