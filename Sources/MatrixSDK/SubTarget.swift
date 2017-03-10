@@ -13,7 +13,6 @@ import Moya
 public protocol SubTarget: QueryAccessTokenAuthorizable {
     var path: String { get }
     var method: Moya.Method { get }
-    var queryParameters: [String: Any]? { get }
     var parameters: [String: Any]? { get }
     var sampleData: Data { get }
     var task: Task { get }

@@ -78,6 +78,13 @@
 		31781BD91E70A61C00BE9716 /* SubTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31781BD71E70A61C00BE9716 /* SubTarget.swift */; };
 		31781BDA1E70A61C00BE9716 /* SubTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31781BD71E70A61C00BE9716 /* SubTarget.swift */; };
 		31781BDB1E70A61C00BE9716 /* SubTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31781BD71E70A61C00BE9716 /* SubTarget.swift */; };
+		31D596711E71D17400DFDAA8 /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596701E71D17400DFDAA8 /* SessionAPI.swift */; };
+		31D596721E71D17400DFDAA8 /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596701E71D17400DFDAA8 /* SessionAPI.swift */; };
+		31D596731E71D17400DFDAA8 /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596701E71D17400DFDAA8 /* SessionAPI.swift */; };
+		31D596741E71D17400DFDAA8 /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596701E71D17400DFDAA8 /* SessionAPI.swift */; };
+		31D596761E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596751E71D1B300DFDAA8 /* SessionAPISpec.swift */; };
+		31D596771E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596751E71D1B300DFDAA8 /* SessionAPISpec.swift */; };
+		31D596781E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D596751E71D1B300DFDAA8 /* SessionAPISpec.swift */; };
 		31F9A0F71E70B19200A3F710 /* ProfileAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9A0F61E70B19200A3F710 /* ProfileAPISpec.swift */; };
 		31F9A0F81E70B19200A3F710 /* ProfileAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9A0F61E70B19200A3F710 /* ProfileAPISpec.swift */; };
 		31F9A0F91E70B19200A3F710 /* ProfileAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9A0F61E70B19200A3F710 /* ProfileAPISpec.swift */; };
@@ -196,6 +203,8 @@
 		31375E861E70F01500C72EF4 /* DynamicProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicProvider.swift; sourceTree = "<group>"; };
 		317020811E7087750047C8E1 /* ProfileAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
 		31781BD71E70A61C00BE9716 /* SubTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTarget.swift; sourceTree = "<group>"; };
+		31D596701E71D17400DFDAA8 /* SessionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPI.swift; sourceTree = "<group>"; };
+		31D596751E71D1B300DFDAA8 /* SessionAPISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPISpec.swift; sourceTree = "<group>"; };
 		31F9A0F61E70B19200A3F710 /* ProfileAPISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAPISpec.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* MatrixSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* MatrixSDK-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MatrixSDK-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -380,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				317020811E7087750047C8E1 /* ProfileAPI.swift */,
+				31D596701E71D17400DFDAA8 /* SessionAPI.swift */,
 			);
 			name = Targets;
 			sourceTree = "<group>";
@@ -423,6 +433,7 @@
 			children = (
 				31F9A0F61E70B19200A3F710 /* ProfileAPISpec.swift */,
 				31375E7C1E70E8C500C72EF4 /* QueryAccessTokenPluginSpec.swift */,
+				31D596751E71D1B300DFDAA8 /* SessionAPISpec.swift */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -760,6 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D596711E71D17400DFDAA8 /* SessionAPI.swift in Sources */,
 				31375E871E70F01500C72EF4 /* DynamicProvider.swift in Sources */,
 				52D6D9981BEFF375002C0205 /* MatrixSDK.swift in Sources */,
 				317020821E7087750047C8E1 /* ProfileAPI.swift in Sources */,
@@ -774,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31375E7D1E70E8C500C72EF4 /* QueryAccessTokenPluginSpec.swift in Sources */,
+				31D596761E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */,
 				52D6D99B1BEFF375002C0205 /* MatrixSDKTests.swift in Sources */,
 				31F9A0F71E70B19200A3F710 /* ProfileAPISpec.swift in Sources */,
 			);
@@ -783,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D596731E71D17400DFDAA8 /* SessionAPI.swift in Sources */,
 				31375E891E70F01500C72EF4 /* DynamicProvider.swift in Sources */,
 				52D6D9EA1BEFFFA4002C0205 /* MatrixSDK.swift in Sources */,
 				317020841E7087750047C8E1 /* ProfileAPI.swift in Sources */,
@@ -796,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D596741E71D17400DFDAA8 /* SessionAPI.swift in Sources */,
 				31375E8A1E70F01500C72EF4 /* DynamicProvider.swift in Sources */,
 				52D6DA091BF00081002C0205 /* MatrixSDK.swift in Sources */,
 				317020851E7087750047C8E1 /* ProfileAPI.swift in Sources */,
@@ -809,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D596721E71D17400DFDAA8 /* SessionAPI.swift in Sources */,
 				31375E881E70F01500C72EF4 /* DynamicProvider.swift in Sources */,
 				52D6DA261BF00118002C0205 /* MatrixSDK.swift in Sources */,
 				317020831E7087750047C8E1 /* ProfileAPI.swift in Sources */,
@@ -823,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31375E7E1E70E8C500C72EF4 /* QueryAccessTokenPluginSpec.swift in Sources */,
+				31D596771E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */,
 				DD7502861C68FDDC006590AF /* MatrixSDKTests.swift in Sources */,
 				31F9A0F81E70B19200A3F710 /* ProfileAPISpec.swift in Sources */,
 			);
@@ -833,6 +850,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31375E7F1E70E8C500C72EF4 /* QueryAccessTokenPluginSpec.swift in Sources */,
+				31D596781E71D1B300DFDAA8 /* SessionAPISpec.swift in Sources */,
 				DD75029A1C690CBE006590AF /* MatrixSDKTests.swift in Sources */,
 				31F9A0F91E70B19200A3F710 /* ProfileAPISpec.swift in Sources */,
 			);
