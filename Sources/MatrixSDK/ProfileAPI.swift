@@ -1,5 +1,5 @@
 //
-//  Profile.swift
+//  ProfileAPI.swift
 //  MatrixSDK
 //
 //  Created by Gustavo Perdomo on 3/8/17.
@@ -43,14 +43,12 @@ extension ProfileAPI: SubTarget {
 
     public var shouldAuthorize: Bool {
         switch self {
-        case .getProfile,
-             .getDisplayName,
-             .getAvatarUrl:
-            return false
-
         case .setDisplayName,
              .setAvatarUrl:
             return true
+
+        default:
+            return false
         }
     }
 
@@ -65,10 +63,6 @@ extension ProfileAPI: SubTarget {
              .setAvatarUrl:
             return .put
         }
-    }
-
-    public var queryParameters: [String: Any]? {
-        return nil
     }
 
     public var parameters: [String: Any]? {
@@ -110,7 +104,7 @@ extension ProfileAPI: SubTarget {
 
         case .setDisplayName,
              .setAvatarUrl:
-            return Data()
+            return [:].jsonData()!
         }
     }
 
@@ -123,6 +117,6 @@ extension ProfileAPI: SubTarget {
     }
 
     public var validate: Bool {
-        return false
+        return true
     }
 }

@@ -56,7 +56,7 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct validate") {
-                    expect(target.validate) == false
+                    expect(target.validate) == true
                 }
             }
 
@@ -98,7 +98,7 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct validate") {
-                    expect(target.validate) == false
+                    expect(target.validate) == true
                 }
             }
 
@@ -140,7 +140,7 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct validate") {
-                    expect(target.validate) == false
+                    expect(target.validate) == true
                 }
             }
 
@@ -164,7 +164,6 @@ class ProfileAPISpec: QuickSpec {
                 it("uses correct parameters") {
                     expect(target.parameters?.count) == 1
                     expect(target.parameters?["displayname"] as? String) == "GP"
-
                 }
 
                 it("uses correct method") {
@@ -176,13 +175,13 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct sample data") {
-                    let expectedData = Data()
+                    let expectedData = [:].jsonData()!
 
                     expect(target.sampleData).to(equal(expectedData))
                 }
 
                 it("uses correct validate") {
-                    expect(target.validate) == false
+                    expect(target.validate) == true
                 }
             }
 
@@ -217,13 +216,13 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct sample data") {
-                    let expectedData = Data()
+                    let expectedData = [:].jsonData()!
 
                     expect(target.sampleData).to(equal(expectedData))
                 }
 
                 it("uses correct validate") {
-                    expect(target.validate) == false
+                    expect(target.validate) == true
                 }
             }
         }

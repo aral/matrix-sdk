@@ -10,3 +10,7 @@ import Foundation
 
 public typealias UserId = String
 public typealias MxcUrl = String
+
+public enum LoginType: String {
+    case password = "m.login.password"
+}
