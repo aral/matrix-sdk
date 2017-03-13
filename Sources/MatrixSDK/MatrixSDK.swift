@@ -14,3 +14,14 @@ public typealias MxcUrl = String
 public enum LoginType: String {
     case password = "m.login.password"
 }
+
+
+public extension Array {
+    public func jsonData(prettify: Bool = false) -> Data? {
+        guard JSONSerialization.isValidJSONObject(self) else {
+            return nil
+        }
+        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization.WritingOptions()
+        return try? JSONSerialization.data(withJSONObject: self, options: options)
+    }
+}

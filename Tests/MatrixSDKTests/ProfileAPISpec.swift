@@ -6,7 +6,6 @@
 //  Copyright © 2017 MatrixSDK. All rights reserved.
 //
 
-import Foundation
 import Quick
 import Nimble
 import Moya

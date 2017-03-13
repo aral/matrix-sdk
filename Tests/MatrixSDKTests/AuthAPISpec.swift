@@ -11,7 +11,7 @@ import Nimble
 import Moya
 @testable import MatrixSDK
 
-class SessionAPISpec: QuickSpec {
+class AuthAPISpec: QuickSpec {
     override func spec() {
         describe("TARGET: SessionAPI") {
             var target: SubTarget!
@@ -19,7 +19,7 @@ class SessionAPISpec: QuickSpec {
             describe("GET /login") {
                 context("with user and password") {
                     beforeEach {
-                        target = SessionAPI.login(type: .password, password: "12345", username: "user", address: nil)
+                        target = AuthAPI.login(type: .password, password: "12345", username: "user", address: nil)
                     }
 
                     it("uses correct shouldAuthorize") {
@@ -68,7 +68,7 @@ class SessionAPISpec: QuickSpec {
 
                 context("with third party address") {
                     beforeEach {
-                        target = SessionAPI.login(type: .password, password: "12345", username: nil, address: "user@domain.com")
+                        target = AuthAPI.login(type: .password, password: "12345", username: nil, address: "user@domain.com")
                     }
 
                     it("uses correct shouldAuthorize") {
@@ -119,7 +119,7 @@ class SessionAPISpec: QuickSpec {
 
             describe("POST /logout") {
                 beforeEach {
-                    target = SessionAPI.logout
+                    target = AuthAPI.logout
                 }
 
                 it("uses correct shouldAuthorize") {
@@ -159,7 +159,7 @@ class SessionAPISpec: QuickSpec {
 
             describe("POST /tokenrefresh") {
                 beforeEach {
-                    target = SessionAPI.refresh(token: "ABC123456")
+                    target = AuthAPI.refresh(token: "ABC123456")
                 }
 
                 it("uses correct shouldAuthorize") {
