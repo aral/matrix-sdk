@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import Moya
+import SwiftyJSON
 @testable import MatrixSDK
 
 class AuthAPISpec: QuickSpec {
@@ -36,9 +37,12 @@ class AuthAPISpec: QuickSpec {
 
                     it("uses correct parameters") {
                         expect(target.parameters?.count) == 3
-                        expect(target.parameters?["type"] as? String) == LoginType.password.rawValue
-                        expect(target.parameters?["user"] as? String) == "user"
-                        expect(target.parameters?["password"] as? String) == "12345"
+
+                        let json = JSON(target.parameters!)
+
+                        expect(json["type"].string) == LoginType.password.rawValue
+                        expect(json["user"].string) == "user"
+                        expect(json["password"].string) == "12345"
                     }
 
                     it("uses correct method") {
@@ -85,10 +89,13 @@ class AuthAPISpec: QuickSpec {
 
                     it("uses correct parameters") {
                         expect(target.parameters?.count) == 4
-                        expect(target.parameters?["type"] as? String) == LoginType.password.rawValue
-                        expect(target.parameters?["address"] as? String) == "user@domain.com"
-                        expect(target.parameters?["password"] as? String) == "12345"
-                        expect(target.parameters?["medium"] as? String) == "email"
+
+                        let json = JSON(target.parameters!)
+
+                        expect(json["type"].string) == LoginType.password.rawValue
+                        expect(json["address"].string) == "user@domain.com"
+                        expect(json["password"].string) == "12345"
+                        expect(json["medium"].string) == "email"
                     }
 
                     it("uses correct method") {
@@ -176,7 +183,10 @@ class AuthAPISpec: QuickSpec {
 
                 it("uses correct parameters") {
                     expect(target.parameters?.count) == 1
-                    expect(target.parameters?["refresh_token"] as? String) == "ABC123456"
+
+                    let json = JSON(target.parameters!)
+
+                    expect(json["refresh_token"].string) == "ABC123456"
                 }
 
                 it("uses correct method") {

@@ -9,6 +9,8 @@
 import Quick
 import Nimble
 import Moya
+import SwiftyJSON
+
 @testable import MatrixSDK
 
 class PresenceAPISpec: QuickSpec {
@@ -94,12 +96,14 @@ class PresenceAPISpec: QuickSpec {
                 it("uses correct parameters") {
                     expect(target.parameters).toNot(beNil())
 
-                    let invite: [String]? = target.parameters?["invite"] as? [String]
+                    let json = JSON(target.parameters!)
+
+                    let invite = json["invite"].array
                     expect(invite).toNot(beNil())
                     expect(invite?.count).to(equal(1))
                     expect(invite?.contains("@bob:matrix.org")).to(beTrue())
 
-                    let drop: [String]? = target.parameters?["drop"] as? [String]
+                    let drop = json["drop"].array
                     expect(drop).toNot(beNil())
                     expect(drop?.count).to(equal(1))
                     expect(drop?.contains("@alice:matrix.org")).to(beTrue())
@@ -189,8 +193,11 @@ class PresenceAPISpec: QuickSpec {
                 it("uses correct parameters") {
                     expect(target.parameters).toNot(beNil())
                     expect(target.parameters?.count).to(equal(2))
-                    expect(target.parameters?["presence"] as? String).to(equal(PresenceState.online.rawValue))
-                    expect(target.parameters?["status_msg"] as? String).to(equal("I'm here."))
+
+                    let json = JSON(target.parameters!)
+
+                    expect(json["presence"].string).to(equal(PresenceState.online.rawValue))
+                    expect(json["status_msg"].string).to(equal("I'm here."))
                 }
 
                 it("uses correct method") {
@@ -217,8 +224,11 @@ class PresenceAPISpec: QuickSpec {
 
                         expect(target.parameters).toNot(beNil())
                         expect(target.parameters?.count).to(equal(1))
-                        expect(target.parameters?["presence"] as? String).to(equal(PresenceState.online.rawValue))
-                        expect(target.parameters?["status_msg"]).to(beNil())
+
+                        let json = JSON(target.parameters!)
+
+                        expect(json["presence"].string).to(equal(PresenceState.online.rawValue))
+                        expect(json["status_msg"].string).to(beNil())
                     }
                 }
             }

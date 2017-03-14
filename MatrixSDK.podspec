@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.dependency "Moya", "~> 8.0"
   s.dependency "Unbox", "~> 2.4"
+  s.dependency "Wrap", "~> 2.1"
   s.dependency "MoyaUnbox", "~> 1.0"
   s.dependency "SwifterSwift", "~> 1.6"
   s.dependency "Alamofire", "~> 4.4"

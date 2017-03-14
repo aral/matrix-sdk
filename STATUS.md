@@ -190,32 +190,32 @@ Legend:
     <th align="left" colspan="3">Joining rooms</th>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/29">#29</a></td>
     <td>POST /rooms/:room_id/invite</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/30">#30</a></td>
     <td>POST /join/:room_id_or_alias</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/31">#31</a></td>
     <td>POST /rooms/:room_id/join</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/32">#32</a></td>
     <td>POST /rooms/:room_id/kick</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/33">#33</a></td>
     <td>POST /rooms/:room_id/unban</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/34">#34</a></td>
     <td>POST /rooms/:room_id/ban</td>
   </tr>
@@ -223,12 +223,12 @@ Legend:
     <th align="left" colspan="3">Leaving rooms</th>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/35">#35</a></td>
     <td>POST /rooms/:room_id/forget</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/36">#36</a></td>
     <td>POST /rooms/:room_id/leave</td>
   </tr>
