@@ -59,7 +59,7 @@ extension AuthAPI: SubTarget {
                 params["user"] = u
             } else if let a = address {
                 params["address"] = a
-                params["medium"] = "email"
+                params["medium"] = LoginMedium.email.rawValue
             }
 
             return params

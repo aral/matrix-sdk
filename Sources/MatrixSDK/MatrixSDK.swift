@@ -9,12 +9,16 @@
 import Foundation
 
 public typealias UserId = String
+public typealias EventId = String
 public typealias MxcUrl = String
 
 public enum LoginType: String {
     case password = "m.login.password"
 }
 
+public enum LoginMedium: String, RawRepresentable {
+    case email
+}
 
 public extension Array {
     public func jsonData(prettify: Bool = false) -> Data? {
