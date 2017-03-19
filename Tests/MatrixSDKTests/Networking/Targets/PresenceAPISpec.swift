@@ -1,152 +1,24 @@
 //
-//  ProfileAPISpec.swift
+//  PresenceAPISpec.swift
 //  MatrixSDK
 //
-//  Created by Gustavo Perdomo on 3/8/17.
+//  Created by Gustavo Perdomo on 3/10/17.
 //  Copyright © 2017 MatrixSDK. All rights reserved.
 //
 
-import Foundation
 import Quick
 import Nimble
 import Moya
 @testable import MatrixSDK
 
-class ProfileAPISpec: QuickSpec {
+class PresenceAPISpec: QuickSpec {
     override func spec() {
-        describe("TARGET: ProfileAPI") {
+        describe("TARGET: PresenceAPI") {
             var target: SubTarget!
 
-            context("GET /profile/{userId}") {
+            describe("GET /_matrix/client/r0/presence/list/{userId}") {
                 beforeEach {
-                    target = ProfileAPI.getProfile(of: "@user:domain.com")
-                }
-
-                it("uses correct shouldAuthorize") {
-                    expect(target.shouldAuthorize) == false
-                }
-
-                it("uses correct path") {
-                    expect(target.path) == "/_matrix/client/r0/profile/%40user:domain.com"
-                }
-
-                it("uses correct parameter encoding.") {
-                    expect(target.parameterEncoding is JSONEncoding) == true
-                }
-
-                it("uses correct parameters") {
-                    expect(target.parameters).to(beNil())
-                }
-
-                it("uses correct method") {
-                    expect(target.method) == Method.get
-                }
-
-                it("uses correct task") {
-                    expect(String(describing: target.task)) == "request"
-                }
-
-                it("uses correct sample data") {
-                    let expectedData = [
-                        "avatar_url": "mxc://matrix.org/SDGdghriugerRg",
-                        "displayname": "Alice Margatroid"
-                        ].jsonData()!
-
-                    expect(target.sampleData).to(equal(expectedData))
-                }
-
-                it("uses correct validate") {
-                    expect(target.validate) == true
-                }
-            }
-
-            context("GET /profile/{userId}/displayname") {
-                beforeEach {
-                    target = ProfileAPI.getDisplayName(of: "@user:domain.com")
-                }
-
-                it("uses correct shouldAuthorize") {
-                    expect(target.shouldAuthorize) == false
-                }
-
-                it("uses correct path") {
-                    expect(target.path) == "/_matrix/client/r0/profile/%40user:domain.com/displayname"
-                }
-
-                it("uses correct parameter encoding.") {
-                    expect(target.parameterEncoding is JSONEncoding) == true
-                }
-
-                it("uses correct parameters") {
-                    expect(target.parameters).to(beNil())
-                }
-
-                it("uses correct method") {
-                    expect(target.method) == Method.get
-                }
-
-                it("uses correct task") {
-                    expect(String(describing: target.task)) == "request"
-                }
-
-                it("uses correct sample data") {
-                    let expectedData = [
-                        "displayname": "Alice Margatroid"
-                        ].jsonData()!
-
-                    expect(target.sampleData).to(equal(expectedData))
-                }
-
-                it("uses correct validate") {
-                    expect(target.validate) == true
-                }
-            }
-
-            context("GET /profile/{userId}/avatar_url") {
-                beforeEach {
-                    target = ProfileAPI.getAvatarUrl(of: "@user:domain.com")
-                }
-
-                it("uses correct shouldAuthorize") {
-                    expect(target.shouldAuthorize) == false
-                }
-
-                it("uses correct path") {
-                    expect(target.path) == "/_matrix/client/r0/profile/%40user:domain.com/avatar_url"
-                }
-
-                it("uses correct parameter encoding.") {
-                    expect(target.parameterEncoding is JSONEncoding) == true
-                }
-
-                it("uses correct parameters") {
-                    expect(target.parameters).to(beNil())
-                }
-
-                it("uses correct method") {
-                    expect(target.method) == Method.get
-                }
-
-                it("uses correct task") {
-                    expect(String(describing: target.task)) == "request"
-                }
-
-                it("uses correct sample data") {
-                    let expectedData = [
-                        "avatar_url": "mxc://matrix.org/SDGdghriugerRg",
-                        ].jsonData()!
-
-                    expect(target.sampleData).to(equal(expectedData))
-                }
-
-                it("uses correct validate") {
-                    expect(target.validate) == true
-                }
-            }
-
-            context("PUT /profile/{userId}/displayname") {
-                beforeEach {
-                    target = ProfileAPI.setDisplayName(of: "@user:domain.com", to: "GP")
+                    target = PresenceAPI.getList(of: "@user:domain.com")
                 }
 
                 it("uses correct shouldAuthorize") {
@@ -154,7 +26,7 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct path") {
-                    expect(target.path) == "/_matrix/client/r0/profile/%40user:domain.com/displayname"
+                    expect(target.path) == "/_matrix/client/r0/presence/list/%40user:domain.com"
                 }
 
                 it("uses correct parameter encoding.") {
@@ -162,8 +34,163 @@ class ProfileAPISpec: QuickSpec {
                 }
 
                 it("uses correct parameters") {
-                    expect(target.parameters?.count) == 1
-                    expect(target.parameters?["displayname"] as? String) == "GP"
+                    expect(target.parameters).to(beNil())
+                }
+
+                it("uses correct method") {
+                    expect(target.method) == Method.get
+                }
+
+                it("uses correct task") {
+                    expect(String(describing: target.task)) == "request"
+                }
+
+                it("uses correct sample data") {
+                    let expectedData = [
+                        [
+                            "content": [
+                                "last_active_ago": 395,
+                                "presence": "offline",
+                                "user_id": "@alice:matrix.org"
+                            ],
+                            "type": "m.presence"
+                        ],
+                        [
+                            "content": [
+                                "last_active_ago": 16874,
+                                "presence": "online",
+                                "user_id": "@marisa:matrix.org",
+                                "currently_active": true
+                            ],
+                            "type": "m.presence"
+                        ]
+                        ].jsonData()!
+
+                    expect(target.sampleData).to(equal(expectedData))
+                }
+
+                it("uses correct validate") {
+                    expect(target.validate) == true
+                }
+            }
+
+            describe("POST /_matrix/client/r0/presence/list/{userId}") {
+                beforeEach {
+                    target = PresenceAPI.updateList(of: "@user:domain.com", drop: ["@alice:matrix.org"], invite: ["@bob:matrix.org"])
+                }
+
+                it("uses correct shouldAuthorize") {
+                    expect(target.shouldAuthorize) == true
+                }
+
+                it("uses correct path") {
+                    expect(target.path) == "/_matrix/client/r0/presence/list/%40user:domain.com"
+                }
+
+                it("uses correct parameter encoding.") {
+                    expect(target.parameterEncoding is JSONEncoding) == true
+                }
+
+                it("uses correct parameters") {
+                    expect(target.parameters).toNot(beNil())
+
+                    let invite: [String]? = target.parameters?["invite"] as? [String]
+                    expect(invite).toNot(beNil())
+                    expect(invite?.count).to(equal(1))
+                    expect(invite?.contains("@bob:matrix.org")).to(beTrue())
+
+                    let drop: [String]? = target.parameters?["drop"] as? [String]
+                    expect(drop).toNot(beNil())
+                    expect(drop?.count).to(equal(1))
+                    expect(drop?.contains("@alice:matrix.org")).to(beTrue())
+                }
+
+                it("uses correct method") {
+                    expect(target.method) == Method.post
+                }
+
+                it("uses correct task") {
+                    expect(String(describing: target.task)) == "request"
+                }
+
+                it("uses correct sample data") {
+                    let expectedData = [:].jsonData()!
+
+                    expect(target.sampleData).to(equal(expectedData))
+                }
+
+                it("uses correct validate") {
+                    expect(target.validate) == true
+                }
+            }
+
+            describe("GET /_matrix/client/r0/presence/{userId}/status") {
+                beforeEach {
+                    target = PresenceAPI.getState(of: "@user:domain.com")
+                }
+
+                it("uses correct shouldAuthorize") {
+                    expect(target.shouldAuthorize) == true
+                }
+
+                it("uses correct path") {
+                    expect(target.path) == "/_matrix/client/r0/presence/%40user:domain.com/status"
+                }
+
+                it("uses correct parameter encoding.") {
+                    expect(target.parameterEncoding is JSONEncoding) == true
+                }
+
+                it("uses correct parameters") {
+                    expect(target.parameters).to(beNil())
+                }
+
+                it("uses correct method") {
+                    expect(target.method) == Method.get
+                }
+
+                it("uses correct task") {
+                    expect(String(describing: target.task)) == "request"
+                }
+
+                it("uses correct sample data") {
+                    let expectedData = [
+                        "last_active_ago": 4305,
+                        "currently_active": true,
+                        "user_id": "@user:domain.com",
+                        "presence": "online"
+                        ].jsonData()!
+
+                    expect(target.sampleData).to(equal(expectedData))
+                }
+
+                it("uses correct validate") {
+                    expect(target.validate) == true
+                }
+            }
+
+            describe("PUT /_matrix/client/r0/presence/{userId}/status") {
+                beforeEach {
+                    target = PresenceAPI.setState(of: "@user:domain.com", to: .online, withMessage: "I'm here.")
+                }
+
+                it("uses correct shouldAuthorize") {
+                    expect(target.shouldAuthorize) == true
+                }
+
+                it("uses correct path") {
+                    expect(target.path) == "/_matrix/client/r0/presence/%40user:domain.com/status"
+                }
+
+                it("uses correct parameter encoding.") {
+                    expect(target.parameterEncoding is JSONEncoding) == true
+                }
+
+                it("uses correct parameters") {
+                    expect(target.parameters).toNot(beNil())
+                    expect(target.parameters?.count).to(equal(2))
+                    expect(target.parameters?["presence"] as? String).to(equal(PresenceState.online.rawValue))
+                    expect(target.parameters?["status_msg"] as? String).to(equal("I'm here."))
                 }
 
                 it("uses correct method") {
@@ -183,46 +210,16 @@ class ProfileAPISpec: QuickSpec {
                 it("uses correct validate") {
                     expect(target.validate) == true
                 }
-            }
 
-            context("PUT /profile/{userId}/avatar_url") {
-                beforeEach {
-                    target = ProfileAPI.setAvatarUrl(of: "@user:domain.com", to: "mxc://new_avatar_hash")
-                }
+                context("without status message") {
+                    it("uses correct parameters") {
+                        target = PresenceAPI.setState(of: "@user:domain.com", to: .online, withMessage: nil)
 
-                it("uses correct shouldAuthorize") {
-                    expect(target.shouldAuthorize) == true
-                }
-
-                it("uses correct path") {
-                    expect(target.path) == "/_matrix/client/r0/profile/%40user:domain.com/avatar_url"
-                }
-
-                it("uses correct parameter encoding.") {
-                    expect(target.parameterEncoding is JSONEncoding) == true
-                }
-
-                it("uses correct parameters") {
-                    expect(target.parameters?.count) == 1
-                    expect(target.parameters?["avatar_url"] as? String) == "mxc://new_avatar_hash"
-                }
-
-                it("uses correct method") {
-                    expect(target.method) == Method.put
-                }
-
-                it("uses correct task") {
-                    expect(String(describing: target.task)) == "request"
-                }
-
-                it("uses correct sample data") {
-                    let expectedData = [:].jsonData()!
-
-                    expect(target.sampleData).to(equal(expectedData))
-                }
-
-                it("uses correct validate") {
-                    expect(target.validate) == true
+                        expect(target.parameters).toNot(beNil())
+                        expect(target.parameters?.count).to(equal(1))
+                        expect(target.parameters?["presence"] as? String).to(equal(PresenceState.online.rawValue))
+                        expect(target.parameters?["status_msg"]).to(beNil())
+                    }
                 }
             }
         }

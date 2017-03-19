@@ -296,22 +296,22 @@ Legend:
     <th align="left" colspan="3">Presence</th>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/46">#46</a></td>
     <td>PUT /presence/:user_id/status</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/47">#47</a></td>
     <td>GET /presence/:user_id/status</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/48">#48</a></td>
     <td>POST /presence/list/:user_id</td>
   </tr>
   <tr>
-    <td align="center">:no_entry_sign:</td>
+    <td align="center">:white_check_mark:</td>
     <td><a href="https://github.com/gperdomor/matrix-swift-sdk/issues/49">#49</a></td>
     <td>GET /presence/list/:user_id</td>
   </tr>

@@ -1,5 +1,5 @@
 //
-//  SessionAPI.swift
+//  AuthAPI.swift
 //  MatrixSDK
 //
 //  Created by Gustavo Perdomo on 3/9/17.
@@ -15,13 +15,13 @@ import SwifterSwift
 /// - login: Authenticates the user, and issues an access token they can use to authorize themself in subsequent requests
 /// - logout: Invalidates an existing access token, so that it can no longer be used for authorization
 /// - refreshToken: Exchanges a refresh token for a new access token. This is intended to be used if the access token has expired.
-public enum SessionAPI {
+public enum AuthAPI {
     case login(type: LoginType, password: String, username: String?, address: String?)
     case logout
     case refresh(token: String)
 }
 
-extension SessionAPI: SubTarget {
+extension AuthAPI: SubTarget {
     public var path: String {
         switch self {
         case .login(_, _, _, _):
@@ -59,7 +59,7 @@ extension SessionAPI: SubTarget {
                 params["user"] = u
             } else if let a = address {
                 params["address"] = a
-                params["medium"] = "email"
+                params["medium"] = LoginMedium.email.rawValue
             }
 
             return params
