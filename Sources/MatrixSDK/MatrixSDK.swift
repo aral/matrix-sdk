@@ -10,6 +10,7 @@ import Foundation
 
 public typealias UserId = String
 public typealias EventId = String
+public typealias RoomId = String
 public typealias MxcUrl = String
 
 public enum LoginType: String {

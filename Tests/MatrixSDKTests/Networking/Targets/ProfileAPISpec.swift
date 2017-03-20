@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import Moya
+import SwiftyJSON
 @testable import MatrixSDK
 
 class ProfileAPISpec: QuickSpec {
@@ -162,7 +163,10 @@ class ProfileAPISpec: QuickSpec {
 
                 it("uses correct parameters") {
                     expect(target.parameters?.count) == 1
-                    expect(target.parameters?["displayname"] as? String) == "GP"
+
+                    let json = JSON(target.parameters!)
+
+                    expect(json["displayname"].string) == "GP"
                 }
 
                 it("uses correct method") {
@@ -203,7 +207,10 @@ class ProfileAPISpec: QuickSpec {
 
                 it("uses correct parameters") {
                     expect(target.parameters?.count) == 1
-                    expect(target.parameters?["avatar_url"] as? String) == "mxc://new_avatar_hash"
+
+                    let json = JSON(target.parameters!)
+
+                    expect(json["avatar_url"].string) == "mxc://new_avatar_hash"
                 }
 
                 it("uses correct method") {
